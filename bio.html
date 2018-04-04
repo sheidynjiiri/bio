@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-guide-concepts-1-production</title>
+  
+
+  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  
+
+  
+</head>
+<body >
+  <div ng-app ng-init="first_name; last_name; birth_year; current_year=2018; gender='female'; full_name='' ">
+  <b>EIT Bio:</b>
+  <div>
+    First name: <input type="text" ng-model="first_name">
+  </div>
+  <div>
+    Last name: <input type="text" ng-model="last_name">
+  </div>
+  <div>
+    Birth_year: <input type="number" ng-model="birth_year">
+  </div>
+  <div>
+    Gender: <input type="radio" value="female" checked> female  
+            <input type="radio" value="male"> male
+  </div>
+  <div>
+    <b>Full name:</b> {{first_name + ' ' + last_name }}
+  </div>
+  <div>
+    <b>Age:</b> {{birth_year? current_year - birth_year: '' }}
+  </div>
+  
+  
+</div>
+</body>
+</html>
